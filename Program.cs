@@ -1,17 +1,18 @@
 ﻿// Создать двумерный массив:
-void FillArrayRandomNumbers2(int[,] array)
+void FillArrayRandomLetters(string[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
+        System.Console.WriteLine($"Введите в столбик {i+1} строку массива, состоящую из {array.GetLength(0)} слов");
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = new Random().Next(1, 10);
+            array[i, j] = Console.ReadLine();
         }
     }
 }
 
 // Напечатать двумерный массив:
-void PrintArray(int[,] array)
+void PrintArray(string[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -24,6 +25,6 @@ void PrintArray(int[,] array)
         Console.WriteLine("");
     }
 }
-int[,] matrix = new int[4,4];
- FillArrayRandomNumbers2(matrix);
+string [,] matrix = new string[3,2];
+ FillArrayRandomLetters(matrix);
  PrintArray(matrix);
